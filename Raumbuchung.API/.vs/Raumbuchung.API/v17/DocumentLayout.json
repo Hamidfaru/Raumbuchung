@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\controllers\\buchungencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:controllers\\buchungencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\dtos\\buchungdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:dtos\\buchungdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\models\\raum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:models\\raum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\controllers\\raumecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:controllers\\raumecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\dtos\\raumdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:dtos\\raumdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\raumbuchung.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:raumbuchung.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\data\\oracledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:data\\oracledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\models\\buchung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:models\\buchung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\services\\iraumbuchungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:services\\iraumbuchungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchung.api\\services\\raumbuchungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:services\\raumbuchungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T05:14:28.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RaumDto.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\DTOs\\RaumDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\RaumDto.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\DTOs\\RaumDto.cs",
+              "RelativeToolTip": "DTOs\\RaumDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:14:19.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Raum.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Models\\Raum.cs",
+              "RelativeDocumentMoniker": "Models\\Raum.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Models\\Raum.cs",
+              "RelativeToolTip": "Models\\Raum.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAywB0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:48:02.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Buchung.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Models\\Buchung.cs",
+              "RelativeDocumentMoniker": "Models\\Buchung.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Models\\Buchung.cs",
+              "RelativeToolTip": "Models\\Buchung.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAIBFwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:54:51.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BuchungenController.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Controllers\\BuchungenController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BuchungenController.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Controllers\\BuchungenController.cs",
+              "RelativeToolTip": "Controllers\\BuchungenController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAKIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:38:01.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RaumeController.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Controllers\\RaumeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RaumeController.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Controllers\\RaumeController.cs",
+              "RelativeToolTip": "Controllers\\RaumeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA0wGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:36:23.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OracleDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Data\\OracleDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\OracleDbContext.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Data\\OracleDbContext.cs",
+              "RelativeToolTip": "Data\\OracleDbContext.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAtwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:03:27.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAA9wF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:40:19.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Raumbuchung.API.csproj",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API.csproj",
+              "RelativeDocumentMoniker": "Raumbuchung.API.csproj",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API.csproj",
+              "RelativeToolTip": "Raumbuchung.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-03T03:30:14.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BuchungDto.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\DTOs\\BuchungDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\BuchungDto.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\DTOs\\BuchungDto.cs",
+              "RelativeToolTip": "DTOs\\BuchungDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAABAwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:15:43.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IRaumbuchungRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Services\\IRaumbuchungRepository.cs",
+              "RelativeDocumentMoniker": "Services\\IRaumbuchungRepository.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Services\\IRaumbuchungRepository.cs",
+              "RelativeToolTip": "Services\\IRaumbuchungRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:25:44.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RaumbuchungRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Services\\RaumbuchungRepository.cs",
+              "RelativeDocumentMoniker": "Services\\RaumbuchungRepository.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Services\\RaumbuchungRepository.cs",
+              "RelativeToolTip": "Services\\RaumbuchungRepository.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAA9wFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:30:59.312Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
