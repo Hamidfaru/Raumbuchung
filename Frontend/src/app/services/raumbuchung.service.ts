@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-// 👇 INTERFACES MÜSSEN OBEN DEFINIERIERT SEIN
+/* =======================
+   INTERFACES
+======================= */
 export interface Raum {
   raumId: number;
   raumName: string;
@@ -43,76 +45,86 @@ export interface CreateBuchung {
   providedIn: 'root'
 })
 export class RaumbuchungService {
-private apiUrl = 'http://localhost:5012/api';
 
-  constructor(private http: HttpClient) { }
+  private apiUrl = 'http://localhost:5012/api';
 
-  // Räume Endpoints mit Error Handling
+  constructor(private http: HttpClient) {}
+
+  /* =======================
+     RÄUME
+  ======================= */
   getRaume(): Observable<Raum[]> {
     return this.http.get<Raum[]>(`${this.apiUrl}/raume`).pipe(
-      catchError(this.handleError)
+      catchError(() => {
+        console.warn('Backend nicht erreichbar – Test-Daten werden verwendet');
+
+        // ✅ TESTDATEN
+        return of<Raum[]>([
+          {
+            raumId: 1,
+            raumName: 'Konferenzraum A',
+            kapazitaet: 12,
+            aktiv: true
+          },
+          {
+            raumId: 2,
+            raumName: 'Meetingraum B',
+            kapazitaet: 6,
+            aktiv: true
+          },
+          {
+            raumId: 3,
+            raumName: 'Schulungsraum C',
+            kapazitaet: 20,
+            aktiv: true
+          },
+          {
+            raumId: 4,
+            raumName: 'Kreativraum D',
+            kapazitaet: 8,
+            aktiv: true
+          }
+        ]);
+      })
     );
   }
 
   getRaumById(id: number): Observable<Raum> {
-    return this.http.get<Raum>(`${this.apiUrl}/raume/${id}`).pipe(
-      catchError(this.handleError)
-    );
+    return this.http.get<Raum>(`${this.apiUrl}/raume/${id}`);
   }
 
-  // Buchungen Endpoints mit Error Handling
+  /* =======================
+     BUCHUNGEN
+  ======================= */
   getBuchungen(): Observable<Buchung[]> {
-    return this.http.get<Buchung[]>(`${this.apiUrl}/buchungen`).pipe(
-      catchError(this.handleError)
-    );
+    return this.http.get<Buchung[]>(`${this.apiUrl}/buchungen`);
   }
 
   getBuchungById(id: number): Observable<Buchung> {
-    return this.http.get<Buchung>(`${this.apiUrl}/buchungen/${id}`).pipe(
-      catchError(this.handleError)
-    );
+    return this.http.get<Buchung>(`${this.apiUrl}/buchungen/${id}`);
   }
 
   createBuchung(buchung: CreateBuchung): Observable<Buchung> {
-    return this.http.post<Buchung>(`${this.apiUrl}/buchungen`, buchung).pipe(
-      catchError(this.handleError)
-    );
+    return this.http.post<Buchung>(`${this.apiUrl}/buchungen`, buchung);
   }
 
   getBuchungenByRaum(raumId: number): Observable<Buchung[]> {
-    return this.http.get<Buchung[]>(`${this.apiUrl}/buchungen/raum/${raumId}`).pipe(
-      catchError(this.handleError)
-    );
+    return this.http.get<Buchung[]>(`${this.apiUrl}/buchungen/raum/${raumId}`);
   }
 
-  // Verfügbarkeit prüfen
-  checkVerfuegbarkeit(raumId: number, startZeit: string, endZeit: string): Observable<boolean> {
-    let params = new HttpParams()
-      .set('raumId', raumId.toString())
+  checkVerfuegbarkeit(
+    raumId: number,
+    startZeit: string,
+    endZeit: string
+  ): Observable<boolean> {
+    const params = new HttpParams()
+      .set('raumId', raumId)
       .set('startZeit', startZeit)
       .set('endZeit', endZeit);
 
-    return this.http.get<boolean>(`${this.apiUrl}/buchungen/verfuegbarkeit`, { params }).pipe(
-      catchError(this.handleError)
+    return this.http.get<boolean>(
+      `${this.apiUrl}/buchungen/verfuegbarkeit`,
+      { params }
     );
   }
-
-  // Error Handling
- private handleError(error: HttpErrorResponse) {
-  let errorMessage = 'Ein Fehler ist aufgetreten';
-  
-  if (error.error instanceof Error) {
-    // Client-seitiger Fehler
-    errorMessage = `Fehler: ${error.error.message}`;
-  } else {
-    // Server-seitiger Fehler
-    errorMessage = `Server Fehler ${error.status}: ${error.message}`;
-    if (error.error && typeof error.error === 'string') {
-      errorMessage += ` - ${error.error}`;
-    }
-  }
-  
-  console.error('API Fehler:', error);
-  return throwError(() => new Error(errorMessage));
-}
 }
