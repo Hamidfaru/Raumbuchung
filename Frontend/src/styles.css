@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* LIGHT MODE */
+:root {
+  --nav-bg: #ffffff;
+  --nav-text: #555;
+  --nav-accent: #3498db;
+  --nav-shadow: rgba(0, 0, 0, 0.1);
+  --dropdown-bg: #ffffff;
+}
+
+/* DARK MODE */
+.dark {
+  --nav-bg: #111827;
+  --nav-text: #e5e7eb;
+  --nav-accent: #3b82f6;
+  --nav-shadow: rgba(0, 0, 0, 0.6);
+  --dropdown-bg: #1f2937;
+}
+
+body {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  transition: background 0.3s, color 0.3s;
+}

@@ -1,5 +1,5 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,25 +10,53 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
+
   isMenuActive = false;
   activeDropdown: string | null = null;
+  isDark = false;
+  private isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+
+    if (this.isBrowser) {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        this.enableDark();
+      }
+    }
+  }
 
   toggleMenu(): void {
     this.isMenuActive = !this.isMenuActive;
   }
 
-  closeMenu(): void {
-    this.isMenuActive = false;
-    this.activeDropdown = null;
+  toggleDropdown(name: string): void {
+    this.activeDropdown = this.activeDropdown === name ? null : name;
   }
 
-  toggleDropdown(dropdown: string): void {
-    this.activeDropdown = this.activeDropdown === dropdown ? null : dropdown;
+  toggleTheme(): void {
+    this.isDark ? this.enableLight() : this.enableDark();
+  }
+
+  enableDark(): void {
+    if (!this.isBrowser) return;
+
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    this.isDark = true;
+  }
+
+  enableLight(): void {
+    if (!this.isBrowser) return;
+
+    document.body.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+    this.isDark = false;
   }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event): void {
-    // Schließe Dropdowns wenn außerhalb geklickt wird
     const target = event.target as HTMLElement;
     if (!target.closest('.dropdown')) {
       this.activeDropdown = null;
