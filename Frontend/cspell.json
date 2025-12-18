@@ -22,6 +22,15 @@
     "spec",
     "navlink",
     "divider",
-    "avatar"
+    "avatar",
+    "raum",
+    "raume",
+    "accent",
+    "hamburger",
+    "theme",
+    "kapazitaet",
+    "gebaeude",
+    "etage",
+    "ausstattung"
   ]
 }
