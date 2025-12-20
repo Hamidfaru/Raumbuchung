@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RaumList } from './raum-list';
+import {RaumListComponent } from './raum-list.component';
 
-describe('RaumList', () => {
-  let component: RaumList;
-  let fixture: ComponentFixture<RaumList>;
+describe('RaumListComponent', () => {
+  let component: RaumListComponent;
+  let fixture: ComponentFixture<RaumListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RaumList]
+      imports: [RaumListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RaumList);
+    fixture = TestBed.createComponent(RaumListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
