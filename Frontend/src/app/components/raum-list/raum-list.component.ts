@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { RaumbuchungService, Raum } from '../../services/raumbuchung.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-raum-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,FormsModule],
   templateUrl: './raum-list.component.html',
   styleUrl: './raum-list.component.css'
 })
@@ -14,6 +15,9 @@ export class RaumListComponent implements OnInit {
   raume: Raum[] = [];
   loading = true;
   error = '';
+  searchText: string = '';
+gefilterteRaeume: Raum[] = [];
+
 
     categories = [
     {
@@ -68,6 +72,7 @@ export class RaumListComponent implements OnInit {
   this.raumbuchungService.getRaume().subscribe({
     next: (data) => {
       this.raume = data;
+      this.gefilterteRaeume = data;
       this.loading = false;
     },
     error: (error) => {
@@ -95,6 +100,7 @@ export class RaumListComponent implements OnInit {
       ];
       this.loading = false;
       this.error = 'Backend nicht erreichbar - Zeige Test-Daten';
+      this.gefilterteRaeume = this.raume;this.gefilterteRaeume = this.raume;
     }
   });
 
@@ -111,4 +117,16 @@ export class RaumListComponent implements OnInit {
     ];
     return gradients[(raumId - 1) % gradients.length];
   }
+
+searchRooms(): void {
+  const text = this.searchText.toLowerCase();
+
+  this.gefilterteRaeume = this.raume.filter(raum =>
+    raum.raumName.toLowerCase().includes(text) ||
+    raum.gebaeude?.toLowerCase().includes(text) ||
+    raum.ausstattung?.toLowerCase().includes(text)
+  );
+}
+
+
 }

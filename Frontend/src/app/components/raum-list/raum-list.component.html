@@ -1,13 +1,4 @@
-<h2>Raum Kategorien</h2>
 
-<div class="room-categories">
-  <div class="category-card" *ngFor="let category of categories" [routerLink]="['/buchung', category.id]">
-    <div class="category-icon">{{ category.icon }}</div>
-    <h3>{{ category.name }}</h3>
-    <p>{{ category.description }}</p>
-    <span class="category-count">{{ category.count }} Räume verfügbar</span>
-  </div>
-</div>
 
 <h2 class="section-spacing">Alle Räume</h2>
 
@@ -17,8 +8,19 @@
   <div class="content-section">
     <h1>Willkommen bei RaumBuchung</h1>
     <p>Buchen Sie bequem und einfach Ihre Räumlichkeiten für Veranstaltungen, Meetings und mehr.</p>
+    <h2 class="section-spacing">Alle Räume</h2>
     
-    <h2>Verfügbare Räume</h2>
+   
+        <!-- BOTTOM SUCHE -->
+<div class="bottom-search">
+  <input
+    type="text"
+    placeholder="Raum suchen..."
+    [(ngModel)]="searchText"
+    (input)="searchRooms()"
+  />
+</div>
+<h2>Verfügbare Räume</h2>
     
     <!-- Loading State -->
     <div *ngIf="loading" class="text-center">
@@ -35,7 +37,7 @@
 
     <!-- Räume Grid -->
     <div class="room-list" *ngIf="!loading && !error">
-      <div class="room-card" *ngFor="let raum of raume">
+      <div class="room-card" *ngFor="let raum of gefilterteRaeume">
         <div class="card-img-top placeholder-image" [style.background]="getGradient(raum.raumId)">
           <div class="room-icon">🏢</div>
         </div>
@@ -63,5 +65,16 @@
     </div>
 
     
+  </div>
+</div>
+
+<h2>Raum Kategorien</h2>
+
+<div class="room-categories">
+  <div class="category-card" *ngFor="let category of categories" [routerLink]="['/buchung', category.id]">
+    <div class="category-icon">{{ category.icon }}</div>
+    <h3>{{ category.name }}</h3>
+    <p>{{ category.description }}</p>
+    <span class="category-count">{{ category.count }} Räume verfügbar</span>
   </div>
 </div>
