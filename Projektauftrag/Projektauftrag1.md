@@ -1,101 +1,65 @@
-# Projektauftrag
+# Projektauftrag – RaumBuchung
 
-## Bezeichnung:
+## Projektname
+RaumBuchung – Raumbuchungs-Webanwendung
 
-Raumbuchungs-Webanwendung
-
-## Auftraggeber:
-
+## Auftraggeber
 Herr **David Klewein**
 
-## Projekthintergrund:
+## Projekthintergrund
+Im Rahmen der Diplomarbeit der Schüler der 5ACIF/T an der HTL Leonding wird eine praxisorientierte Raumbuchungs-Webanwendung entwickelt.  
+Ziel ist es, organisatorische Probleme wie Doppelbuchungen, fehlende Übersicht und komplexe Verwaltungssysteme zu vermeiden und eine einfache, benutzerfreundliche Lösung bereitzustellen.
 
-Im Rahmen der Diplomarbeit der 5ACIF/T Schüler der HTL Leonding soll eine praxisorientierte Softwarelösung entwickelt werden. In vielen Organisationen – etwa Schulen, Universitäten, Firmen oder Gemeinden – kommt es regelmäßig zu Problemen bei der Organisation von Räumen: fehlender Überblick, Doppelbuchungen oder komplizierte Verwaltungssysteme.
-Ziel ist es, eine benutzerfreundliche und funktionale Raumbuchungs-Webanwendung zu entwickeln, die diesen Problemen entgegenwirkt und in der Praxis eingesetzt werden kann.
+## Ziel des Projekts
+Ziel ist die Entwicklung einer funktionsfähigen Webanwendung, mit der Benutzer Räume für Meetings, Workshops oder Veranstaltungen einfach suchen und buchen können.
 
-## Ausgangssituation:
+## Projektumfang
+- Anzeige verfügbarer und belegter Räume  
+- Kategorisierung der Räume (z. B. Konferenz-, Meeting-, Schulungsräume)  
+- Suchfunktion (Bottom-Suche)  
+- Buchungsfunktion für Räume  
+- Speicherung von Buchungsinformationen (wer, wann, welcher Raum)  
+- Nutzung von Testdaten, falls das Backend nicht erreichbar ist  
+- Benutzerfreundliches und modernes Webdesign  
 
-Es gibt bereits zahlreiche Raumbuchungssysteme, jedoch sind viele davon teuer, zu komplex oder nicht flexibel genug. Schulen und Firmen benötigen eine einfache, leicht verständliche und kostengünstige Lösung, die genau auf ihre Bedürfnisse zugeschnitten ist.
+## Beteiligte
+- **Projektleiter:** Arwin Mohibe  
+- **Projektteam:** Hamid Faru, Muhamed Jahic  
+- **Betreuer:** Herr David Klewein  
+- **Stakeholder:** Schüler, Lehrer, Schulverwaltung  
 
-## Projektziele:
+## Zeitrahmen
+- **Sprint 1:** Aufbau der Grundstruktur & Raumliste  
+- **Sprint 2:** Kategorien & Bottom-Suche implementieren  
+- **Sprint 3:** Buchungsfunktion & Styling  
 
-Entwicklung einer funktionsfähigen Raumbuchungs-Webanwendung
+Projektstart: **September 2025**  
+Projektende: **Diplomarbeitsabgabe 2026**
 
-Übersichtliche Darstellung aller Räume (frei oder belegt)
+## Erwartete Ergebnisse
+- Lauffähige Raumbuchungs-Webanwendung  
+- Dokumentierte Softwarearchitektur und Datenmodelle  
+- ER- und UML-Diagramme  
+- Vollständig gepflegtes GitHub-Repository mit Backlog, Issues und User Stories  
+- Schriftliche Diplomarbeit  
+- Abschlusspräsentation vor der Prüfungskommission  
 
-Möglichkeit zur Reservierung und Verwaltung von Räumen
+## Projektressourcen
+**Personal:**  
+- 4 Schüler (Projektteam)
 
-Speicherung, wer den Raum wann gebucht hat
+**Technische Ressourcen:**  
+- Schulserver  
+- Entwicklungsumgebungen  
+- Webframeworks (Angular, optional Backend)
 
-Automatische Freigabe nach Ablauf der Buchungszeit
+## Risiken
+- Zeitdruck durch parallele Schulfächer und Matura  
+- Technische Schwierigkeiten bei der Implementierung  
+- Koordinationsprobleme im Team  
+- Ablehnung des Projekts durch die Schulleitung  
 
-Benutzerfreundliches, modernes Web-Design
+## Abschluss des Projektauftrags
+Linz, 20.09.2025  
 
-Dokumentation der Entwicklung und Ergebnisse im Rahmen der Diplomarbeit
-
-
-
-## Projektendergebnis:
-
-Eine lauffähige Webanwendung mit den definierten Kernfunktionen
-
-Eine technische Dokumentation (inkl. Softwarearchitektur, Datenmodell, Tests)
-
-Eine schriftliche Diplomarbeit mit theoretischen Grundlagen, Projektbeschreibung und Reflexion
-
-Eine Präsentation der Diplomarbeit vor der Prüfungskommission
-
-## Hauptaufgaben und Meilensteine:
-
-**Analyse & Recherche:** Untersuchung bestehender Systeme, Erhebung der Anforderungen
-
-**Konzept & Design:** Erstellung von Mockups, Datenmodell und Architektur
-
-**Implementierung:** Umsetzung der Webanwendung (Frontend & Backend)
-
-**Test & Evaluation:** Funktionstests, Benutzerfreundlichkeit, Verbesserungen
-
-**Dokumentation:** Schriftliche Ausarbeitung der Diplomarbeit
-
-**Präsentation:** Vorstellung der Ergebnisse
-
-## Projektstart:
-
-September 2025
-
-## Projektende:
-
-
-
-## Projektressourcen:
-
-Personal: 4 Schüler (Projektteam)
-
-## Betreuung: Herr Klewein
-
-
-
-
-**Technische Ressourcen:** Schulserver, Entwicklungsumgebungen, Webframeworks
-
-**Risiken:** Ablehnung des Proejekt von SCHULLEITER 
-
-Zeitdruck durch parallele Schulfächer und Matura
-
-Technische Schwierigkeiten bei der Implementierung
-
-Interne Koordinationsprobleme oder Ausfall einzelner Teammitglieder
-
-## Projektorganisation:
-
-
-## projektleiter: Arwin Mohibe
-## Projektteam:  Hamid Faru, Muhamed Jahic
-
-
-## Betreuer: Herr Klewein
-
-## Abschluss des Projektauftrags:
-
-Bitte Vorstellungsvermögen für die Unterschriften nutzen
-Linz, 20.09.2025
+_Unterschriften der Beteiligten erfolgen im Rahmen der Diplomarbeit._
