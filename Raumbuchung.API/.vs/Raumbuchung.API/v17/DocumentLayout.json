@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "Models\\Account\\Benutzer.cs",
               "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Models\\Account\\Benutzer.cs",
               "RelativeToolTip": "Models\\Account\\Benutzer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T21:00:07.223Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAQAAAAAAAAAAAAUwAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-28T18:01:10.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T18:01:10.959Z"
             },
             {
               "$type": "Document",
