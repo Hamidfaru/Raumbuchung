@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchng\\raumbuchung.api\\models\\account\\benutzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:models\\account\\benutzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\projekt_raumbuchung\\projekt_raumbuchung\\raumbuchng\\raumbuchung.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -67,19 +71,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Benutzer.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Models\\Account\\Benutzer.cs",
+              "RelativeDocumentMoniker": "Models\\Account\\Benutzer.cs",
+              "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Models\\Account\\Benutzer.cs",
+              "RelativeToolTip": "Models\\Account\\Benutzer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T21:00:07.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-28T18:01:10.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T18:01:10.959Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -87,12 +103,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-11T05:14:28.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T05:14:28.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "RaumDto.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\DTOs\\RaumDto.cs",
               "RelativeDocumentMoniker": "DTOs\\RaumDto.cs",
@@ -100,12 +115,11 @@
               "RelativeToolTip": "DTOs\\RaumDto.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAmwBYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:14:19.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:14:19.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Raum.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Models\\Raum.cs",
               "RelativeDocumentMoniker": "Models\\Raum.cs",
@@ -113,12 +127,11 @@
               "RelativeToolTip": "Models\\Raum.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAwwCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:48:02.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T03:48:02.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Buchung.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Models\\Buchung.cs",
               "RelativeDocumentMoniker": "Models\\Buchung.cs",
@@ -126,12 +139,11 @@
               "RelativeToolTip": "Models\\Buchung.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAIwDoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:54:51.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T03:54:51.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BuchungenController.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Controllers\\BuchungenController.cs",
               "RelativeDocumentMoniker": "Controllers\\BuchungenController.cs",
@@ -139,12 +151,11 @@
               "RelativeToolTip": "Controllers\\BuchungenController.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAgwKIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:38:01.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:38:01.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RaumeController.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Controllers\\RaumeController.cs",
               "RelativeDocumentMoniker": "Controllers\\RaumeController.cs",
@@ -152,12 +163,11 @@
               "RelativeToolTip": "Controllers\\RaumeController.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAABBwGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:36:23.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:36:23.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "OracleDbContext.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Data\\OracleDbContext.cs",
               "RelativeDocumentMoniker": "Data\\OracleDbContext.cs",
@@ -165,12 +175,11 @@
               "RelativeToolTip": "Data\\OracleDbContext.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAgwEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:03:27.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:03:27.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -178,12 +187,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAgwGsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:40:19.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:40:19.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Raumbuchung.API.csproj",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
               "RelativeDocumentMoniker": "Raumbuchung.API.csproj",
@@ -191,12 +199,11 @@
               "RelativeToolTip": "Raumbuchung.API.csproj",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-03T03:30:14.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T03:30:14.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BuchungDto.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\DTOs\\BuchungDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BuchungDto.cs",
@@ -204,12 +211,11 @@
               "RelativeToolTip": "DTOs\\BuchungDto.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAmwB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:15:43.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:15:43.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IRaumbuchungRepository.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Services\\IRaumbuchungRepository.cs",
               "RelativeDocumentMoniker": "Services\\IRaumbuchungRepository.cs",
@@ -217,12 +223,11 @@
               "RelativeToolTip": "Services\\IRaumbuchungRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAmwBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:25:44.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:25:44.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RaumbuchungRepository.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Services\\RaumbuchungRepository.cs",
               "RelativeDocumentMoniker": "Services\\RaumbuchungRepository.cs",
@@ -230,8 +235,7 @@
               "RelativeToolTip": "Services\\RaumbuchungRepository.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAA1wHkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:30:59.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:30:59.312Z"
             }
           ]
         }
