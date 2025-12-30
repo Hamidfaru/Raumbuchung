@@ -1,4 +1,3 @@
-// Services/RaumbuchungRepository.cs
 using Microsoft.EntityFrameworkCore;
 using Raumbuchung.API.Data;
 using Raumbuchung.API.Models;
@@ -36,12 +35,29 @@ namespace Raumbuchung.API.Services
             return raum;
         }
 
+        public async Task<bool> RaumExistiertAsync(int raumId)
+        {
+            return await _context.Raume
+                .AnyAsync(r => r.RaumId == raumId && r.Aktiv);
+        }
+
         // Buchungen
         public async Task<List<Buchung>> GetBuchungenAsync()
         {
             return await _context.Buchungen
                 .Include(b => b.Raum)
+                .Include(b => b.Benutzer) // WICHTIG: Benutzer mitladen
                 .OrderByDescending(b => b.StartZeit)
+                .ToListAsync();
+        }
+
+        public async Task<List<Buchung>> GetAktiveBuchungenAsync()
+        {
+            return await _context.Buchungen
+                .Where(b => b.Status != "storniert" && b.EndZeit >= DateTime.Now)
+                .Include(b => b.Raum)
+                .Include(b => b.Benutzer) // WICHTIG: Benutzer mitladen
+                .OrderBy(b => b.StartZeit)
                 .ToListAsync();
         }
 
@@ -49,6 +65,7 @@ namespace Raumbuchung.API.Services
         {
             return await _context.Buchungen
                 .Include(b => b.Raum)
+                .Include(b => b.Benutzer) // WICHTIG: Benutzer mitladen
                 .FirstOrDefaultAsync(b => b.BuchungId == id);
         }
 
@@ -57,7 +74,18 @@ namespace Raumbuchung.API.Services
             return await _context.Buchungen
                 .Where(b => b.RaumId == raumId)
                 .Include(b => b.Raum)
+                .Include(b => b.Benutzer) // WICHTIG: Benutzer mitladen
                 .OrderBy(b => b.StartZeit)
+                .ToListAsync();
+        }
+
+        public async Task<List<Buchung>> GetBuchungenByBenutzerAsync(int benutzerId)
+        {
+            return await _context.Buchungen
+                .Where(b => b.BenutzerId == benutzerId)
+                .Include(b => b.Raum)
+                .Include(b => b.Benutzer)
+                .OrderByDescending(b => b.StartZeit)
                 .ToListAsync();
         }
 
@@ -66,6 +94,7 @@ namespace Raumbuchung.API.Services
             return await _context.Buchungen
                 .Where(b => b.StartZeit >= start && b.EndZeit <= ende)
                 .Include(b => b.Raum)
+                .Include(b => b.Benutzer) // WICHTIG: Benutzer mitladen
                 .OrderBy(b => b.StartZeit)
                 .ToListAsync();
         }
@@ -95,6 +124,13 @@ namespace Raumbuchung.API.Services
             }
 
             _context.Buchungen.Add(buchung);
+            await _context.SaveChangesAsync();
+            return buchung;
+        }
+
+        public async Task<Buchung> UpdateBuchungAsync(Buchung buchung)
+        {
+            _context.Entry(buchung).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return buchung;
         }

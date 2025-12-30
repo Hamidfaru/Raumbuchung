@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B4cT7rv09b8=",
+  "dgSpecHash": "uk5rqt50Vfc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
+  "projectFilePath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hamid\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\hamid\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",

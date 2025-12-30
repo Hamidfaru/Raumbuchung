@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Raumbuchung.API.Models.Account;
 
 namespace Raumbuchung.API.Models
 {
@@ -15,15 +16,8 @@ namespace Raumbuchung.API.Models
         public int RaumId { get; set; }
 
         [Required]
-        [Column("BENUTZERNAME")]
-        [StringLength(100)]
-        public string BenutzerName { get; set; } = string.Empty;
-
-        [Required]
-        [Column("BENUTZEREMAIL")]
-        [StringLength(150)]
-        [EmailAddress]
-        public string BenutzerEmail { get; set; } = string.Empty;
+        [Column("BENUTZERID")] // Jetzt Fremdschlüssel zu Benutzer
+        public int BenutzerId { get; set; }
 
         [Required]
         [Column("STARTZEIT")]
@@ -52,8 +46,11 @@ namespace Raumbuchung.API.Models
         [StringLength(500)]
         public string? Bemerkungen { get; set; }
 
-        // Navigation Property - Verknüpfung zum Raum
+        // Navigation Properties
         [ForeignKey("RaumId")]
         public virtual Raum Raum { get; set; } = null!;
+
+        [ForeignKey("BenutzerId")]
+        public virtual Benutzer Benutzer { get; set; } = null!; // Navigation zum Benutzer
     }
 }
