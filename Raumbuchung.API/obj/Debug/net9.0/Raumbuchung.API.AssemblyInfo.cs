@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Raumbuchung.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b5139916382bcadfd09a9fa615258cb1071b46b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1839eefed880dff0c172120f5827021132b7ab8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Raumbuchung.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Raumbuchung.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
