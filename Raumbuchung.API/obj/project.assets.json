@@ -3720,11 +3720,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+      "projectName": "Raumbuchung.API",
+      "projectPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+      "packagesPath": "C:\\Users\\hamid\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
       "projectName": "Raumbuchung.API",
       "projectPath": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
       "packagesPath": "C:\\Users\\hamid\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\obj\\",
+>>>>>>> 2b5139916382bcadfd09a9fa615258cb1071b46b
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3812,5 +3820,21 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
+<<<<<<< HEAD
   }
+=======
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+<<<<<<< HEAD
+      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\obj\\project.nuget.cache\": '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+=======
+      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\obj\\project.nuget.cache\": '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+>>>>>>> 2b5139916382bcadfd09a9fa615258cb1071b46b
+    }
+  ]
+>>>>>>> af43dfcbdf373c6e4ddf6580a51d5ced5911cb35
 }
