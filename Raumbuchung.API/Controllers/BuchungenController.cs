@@ -24,94 +24,12 @@ namespace Raumbuchung.API.Controllers
             try
             {
                 var buchungen = await _repository.GetBuchungenAsync();
-                var buchungDtos = buchungen.Select(b => new BuchungDto
-                {
-                    BuchungId = b.BuchungId,
-                    RaumId = b.RaumId,
-                    BenutzerName = b.BenutzerName,
-                    BenutzerEmail = b.BenutzerEmail,
-                    StartZeit = b.StartZeit,
-                    EndZeit = b.EndZeit,
-                    BuchungsZweck = b.BuchungsZweck,
-                    TeilnehmerAnzahl = b.TeilnehmerAnzahl,
-                    Status = b.Status,
-                    Bemerkungen = b.Bemerkungen,
-                    Raum = b.Raum != null ? new RaumDto
-                    {
-                        RaumId = b.Raum.RaumId,
-                        RaumName = b.Raum.RaumName,
-                        Kapazitaet = b.Raum.Kapazitaet,
-                        Ausstattung = b.Raum.Ausstattung,
-                        Etage = b.Raum.Etage,
-                        Gebaeude = b.Raum.Gebaeude,
-                        Aktiv = b.Raum.Aktiv
-                    } : null
-                });
-
+                var buchungDtos = buchungen.Select(MapToDto);
                 return Ok(buchungDtos);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Fehler beim Abrufen der Buchungen");
-                return StatusCode(500, "Interner Serverfehler");
-            }
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<BuchungDto>> CreateBuchung(CreateBuchungDto createBuchungDto)
-        {
-            try
-            {
-                var buchung = new Buchung
-                {
-                    RaumId = createBuchungDto.RaumId,
-                    BenutzerName = createBuchungDto.BenutzerName,
-                    BenutzerEmail = createBuchungDto.BenutzerEmail,
-                    StartZeit = createBuchungDto.StartZeit,
-                    EndZeit = createBuchungDto.EndZeit,
-                    BuchungsZweck = createBuchungDto.BuchungsZweck,
-                    TeilnehmerAnzahl = createBuchungDto.TeilnehmerAnzahl,
-                    Bemerkungen = createBuchungDto.Bemerkungen
-                };
-
-                var erstellteBuchung = await _repository.CreateBuchungAsync(buchung);
-
-                // Lade den Raum für die Response
-                var raum = await _repository.GetRaumByIdAsync(erstellteBuchung.RaumId);
-
-                var buchungDto = new BuchungDto
-                {
-                    BuchungId = erstellteBuchung.BuchungId,
-                    RaumId = erstellteBuchung.RaumId,
-                    BenutzerName = erstellteBuchung.BenutzerName,
-                    BenutzerEmail = erstellteBuchung.BenutzerEmail,
-                    StartZeit = erstellteBuchung.StartZeit,
-                    EndZeit = erstellteBuchung.EndZeit,
-                    BuchungsZweck = erstellteBuchung.BuchungsZweck,
-                    TeilnehmerAnzahl = erstellteBuchung.TeilnehmerAnzahl,
-                    Status = erstellteBuchung.Status,
-                    Bemerkungen = erstellteBuchung.Bemerkungen,
-                    Raum = raum != null ? new RaumDto
-                    {
-                        RaumId = raum.RaumId,
-                        RaumName = raum.RaumName,
-                        Kapazitaet = raum.Kapazitaet,
-                        Ausstattung = raum.Ausstattung,
-                        Etage = raum.Etage,
-                        Gebaeude = raum.Gebaeude,
-                        Aktiv = raum.Aktiv
-                    } : null
-                };
-
-                return CreatedAtAction(nameof(GetBuchung), new { id = buchungDto.BuchungId }, buchungDto);
-            }
-            catch (InvalidOperationException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Fehler beim Erstellen der Buchung");
                 return StatusCode(500, "Interner Serverfehler");
             }
         }
@@ -127,37 +45,99 @@ namespace Raumbuchung.API.Controllers
                     return NotFound();
                 }
 
-                var buchungDto = new BuchungDto
-                {
-                    BuchungId = buchung.BuchungId,
-                    RaumId = buchung.RaumId,
-                    BenutzerName = buchung.BenutzerName,
-                    BenutzerEmail = buchung.BenutzerEmail,
-                    StartZeit = buchung.StartZeit,
-                    EndZeit = buchung.EndZeit,
-                    BuchungsZweck = buchung.BuchungsZweck,
-                    TeilnehmerAnzahl = buchung.TeilnehmerAnzahl,
-                    Status = buchung.Status,
-                    Bemerkungen = buchung.Bemerkungen,
-                    Raum = new RaumDto
-                    {
-                        RaumId = buchung.Raum.RaumId,
-                        RaumName = buchung.Raum.RaumName,
-                        Kapazitaet = buchung.Raum.Kapazitaet,
-                        Ausstattung = buchung.Raum.Ausstattung,
-                        Etage = buchung.Raum.Etage,
-                        Gebaeude = buchung.Raum.Gebaeude,
-                        Aktiv = buchung.Raum.Aktiv
-                    }
-                };
-
-                return Ok(buchungDto);
+                return Ok(MapToDto(buchung));
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Fehler beim Abrufen der Buchung {Id}", id);
                 return StatusCode(500, "Interner Serverfehler");
             }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<BuchungDto>> CreateBuchung(CreateBuchungDto createBuchungDto)
+        {
+            try
+            {
+                // Prüfe ob Raum existiert
+                if (!await _repository.RaumExistiertAsync(createBuchungDto.RaumId))
+                {
+                    return BadRequest("Raum existiert nicht oder ist nicht aktiv.");
+                }
+
+                var buchung = new Buchung
+                {
+                    RaumId = createBuchungDto.RaumId,
+                    BenutzerId = createBuchungDto.BenutzerId, // Wird vom Frontend gesendet
+                    StartZeit = createBuchungDto.StartZeit,
+                    EndZeit = createBuchungDto.EndZeit,
+                    BuchungsZweck = createBuchungDto.BuchungsZweck,
+                    TeilnehmerAnzahl = createBuchungDto.TeilnehmerAnzahl,
+                    Bemerkungen = createBuchungDto.Bemerkungen
+                };
+
+                var erstellteBuchung = await _repository.CreateBuchungAsync(buchung);
+                return CreatedAtAction(nameof(GetBuchung), new { id = erstellteBuchung.BuchungId }, MapToDto(erstellteBuchung));
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Fehler beim Erstellen der Buchung");
+                return StatusCode(500, "Interner Serverfehler");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBuchung(int id)
+        {
+            try
+            {
+                var success = await _repository.DeleteBuchungAsync(id);
+                if (!success)
+                {
+                    return NotFound();
+                }
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Fehler beim Löschen der Buchung {Id}", id);
+                return StatusCode(500, "Interner Serverfehler");
+            }
+        }
+
+
+        // Hilfsmethode für Mapping (KORRIGIERT)
+        private BuchungDto MapToDto(Buchung buchung)
+        {
+            return new BuchungDto
+            {
+                BuchungId = buchung.BuchungId,
+                RaumId = buchung.RaumId,
+                BenutzerId = buchung.BenutzerId, // WICHTIG
+                BenutzerName = buchung.Benutzer?.VollerName ?? buchung.Benutzer?.Benutzername ?? "", // WICHTIG
+                BenutzerEmail = buchung.Benutzer?.Email ?? "", // WICHTIG
+                StartZeit = buchung.StartZeit,
+                EndZeit = buchung.EndZeit,
+                BuchungsZweck = buchung.BuchungsZweck,
+                TeilnehmerAnzahl = buchung.TeilnehmerAnzahl,
+                Status = buchung.Status,
+                Bemerkungen = buchung.Bemerkungen,
+                Raum = buchung.Raum != null ? new RaumDto
+                {
+                    RaumId = buchung.Raum.RaumId,
+                    RaumName = buchung.Raum.RaumName,
+                    Kapazitaet = buchung.Raum.Kapazitaet,
+                    Ausstattung = buchung.Raum.Ausstattung,
+                    Etage = buchung.Raum.Etage,
+                    Gebaeude = buchung.Raum.Gebaeude,
+                    Aktiv = buchung.Raum.Aktiv
+                } : null
+            };
         }
     }
 }
