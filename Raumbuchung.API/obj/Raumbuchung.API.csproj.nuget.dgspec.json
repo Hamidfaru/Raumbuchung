@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
         "packagesPath": "C:\\Users\\hamid\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchng\\Raumbuchung.API\\obj\\",
+=======
+    "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+        "projectName": "Raumbuchung.API",
+        "projectPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+        "packagesPath": "C:\\Users\\hamid\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\obj\\",
+>>>>>>> 75f3b7caf3d3587137f4e210f579e9a5ecbd96a1
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hamid\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +36,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
