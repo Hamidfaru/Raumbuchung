@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"Version":1,"Hash":"sOlVT7aGV4heJuXkCyp1SEnn1L1Jfo24vkwWFrifMDc=","Source":"Raumbuchung.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
-=======
-{"Version":1,"Hash":"SDuWaQVVXUDYJ0Vzz3I8l10jr+zZFZxXJHqlKUlxjQs=","Source":"Raumbuchung.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"Raumbuchung.API\\wwwroot","Source":"Raumbuchung.API","ContentRoot":"C:\\Users\\hamid\\Projekt_Raumbuchung\\Meins_Hamid\\Raumbuchung.API\\wwwroot\\","BasePath":"/","Pattern":"**"}],"Assets":[],"Endpoints":[]}
->>>>>>> 75f3b7caf3d3587137f4e210f579e9a5ecbd96a1
+{"Version":1,"Hash":"mnAC5WQAMqbNYDry4aLJaXXbJOollu3EyKz7fTKrX5M=","Source":"Raumbuchung.API","BasePath":"_content/Raumbuchung.API","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
