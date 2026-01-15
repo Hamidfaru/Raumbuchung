@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
 using Raumbuchung.API.Data;
+using Raumbuchung.API.DTOs.Account;
 using Raumbuchung.API.Models;
+using Raumbuchung.API.Models.Account;
 using Raumbuchung.API.Services;
+using Raumbuchung.API.Services.Account;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,24 +13,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Database Context - NUR EINE KONFIGURATION!
-// ENTWEDER Oracle:
-// builder.Services.AddDbContext<OracleDbContext>(options =>
-//     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
-
-// ODER In-Memory (für Entwicklung):
+// Database Context
 builder.Services.AddDbContext<OracleDbContext>(options =>
     options.UseInMemoryDatabase("RaumbuchungDB"));
 
 // Services
 builder.Services.AddScoped<IRaumbuchungRepository, RaumbuchungRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
-// CORS für Angular Frontend
+// CORS für ALLE Zugriffe (Entwicklung)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.AllowAnyOrigin()
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -37,62 +35,99 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Test-Daten einfügen
-using (var scope = app.Services.CreateScope())
+async Task InitializeDatabaseAsync()
 {
+    using var scope = app.Services.CreateScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<OracleDbContext>();
+    var authService = scope.ServiceProvider.GetRequiredService<IAuthService>();
 
-    // Datenbank erstellen (falls nicht existiert)
     dbContext.Database.EnsureCreated();
 
-    // Test-Daten nur wenn keine Räume existieren
-    dbContext.Raume.AddRange(
-     new Raum
-     {
-         RaumName = "Konferenzraum 101",
-         Kapazitaet = 20,
-         Ausstattung = "Beamer, Whiteboard",
-         Etage = 1,        // RICHTIG: Zahl für int?
-         Gebaeude = "Hauptgebäude",
-         Aktiv = true,
-         ErstellungsDatum = DateTime.Now.AddDays(-100)
-     },
-     new Raum
-     {
-         RaumName = "Meetingraum 201",
-         Kapazitaet = 8,
-         Ausstattung = "TV, Konferenztelefon",
-         Etage = 2,        // RICHTIG: Zahl für int?
-         Gebaeude = "Hauptgebäude",
-         Aktiv = true,
-         ErstellungsDatum = DateTime.Now.AddDays(-50)
-     }
- ); dbContext.Raume.AddRange(
-    new Raum
+    // 1. ZUERST Räume erstellen
+    if (!dbContext.Raume.Any())
     {
-        RaumName = "Konferenzraum 101",
-        Kapazitaet = 20,
-        Ausstattung = "Beamer, Whiteboard",
-        Etage = 1,        // RICHTIG: Zahl für int?
-        Gebaeude = "Hauptgebäude",
-        Aktiv = true,
-        ErstellungsDatum = DateTime.Now.AddDays(-100)
-    },
-    new Raum
-    {
-        RaumName = "Meetingraum 201",
-        Kapazitaet = 8,
-        Ausstattung = "TV, Konferenztelefon",
-        Etage = 2,        // RICHTIG: Zahl für int?
-        Gebaeude = "Hauptgebäude",
-        Aktiv = true,
-        ErstellungsDatum = DateTime.Now.AddDays(-50)
-    }
-);
+        dbContext.Raume.AddRange(
+            new Raum
+            {
+                RaumName = "Konferenzraum 101",
+                Kapazitaet = 20,
+                Ausstattung = "Beamer, Whiteboard",
+                Etage = 1,
+                Gebaeude = "Hauptgebäude",
+                Aktiv = true,
+                ErstellungsDatum = DateTime.Now.AddDays(-100)
+            },
+            new Raum
+            {
+                RaumName = "Meetingraum 201",
+                Kapazitaet = 8,
+                Ausstattung = "TV, Konferenztelefon",
+                Etage = 2,
+                Gebaeude = "Hauptgebäude",
+                Aktiv = true,
+                ErstellungsDatum = DateTime.Now.AddDays(-50)
+            }
+        );
 
-    dbContext.SaveChanges();
-        Console.WriteLine("✅ Test-Daten erfolgreich eingefügt!");
+        await dbContext.SaveChangesAsync();
+        Console.WriteLine("✅ Räume erstellt");
     }
 
+    // 2. DANN Benutzer erstellen
+    if (!dbContext.Benutzer.Any())
+    {
+        // Test-Benutzer
+        var registerDto = new RegisterDto
+        {
+            Benutzername = "testuser",
+            Email = "test@example.com",
+            Passwort = "Test123!",
+            PasswortBestaetigung = "Test123!",
+            Telefonnummer = "+436641234567",
+            VollerName = "Max Mustermann",
+            Abteilung = "Vertrieb"
+        };
+
+        await authService.RegistrierenAsync(registerDto);
+
+        // Admin-Benutzer
+        var adminDto = new RegisterDto
+        {
+            Benutzername = "admin",
+            Email = "admin@example.com",
+            Passwort = "Admin123!",
+            PasswortBestaetigung = "Admin123!",
+            Telefonnummer = "+436648765432",
+            VollerName = "Administrator",
+            Abteilung = "IT"
+        };
+
+        var admin = await authService.RegistrierenAsync(adminDto);
+        if (admin != null)
+        {
+            admin.IstAdmin = true;
+            await dbContext.SaveChangesAsync();
+        }
+
+        // Weitere Test-Benutzer
+        var kundeDto = new RegisterDto
+        {
+            Benutzername = "kunde",
+            Email = "kunde@example.com",
+            Passwort = "Kunde123!",
+            PasswortBestaetigung = "Kunde123!",
+            Telefonnummer = "+436501234567",
+            VollerName = "Maria Schmidt",
+            Abteilung = "Einkauf"
+        };
+        await authService.RegistrierenAsync(kundeDto);
+
+        Console.WriteLine("✅ Österreichische Test-Benutzer erfolgreich eingefügt!");
+    }
+}
+
+// Datenbank asynchron initialisieren
+await InitializeDatabaseAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -101,8 +136,23 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAngular");
+app.UseCors("AllowAll");
 app.UseAuthorization();
 app.MapControllers();
 
-app.Run();
+// Root endpoint
+app.MapGet("/", () => "✅ Raumbuchung API läuft!");
+
+// Test endpoint
+app.MapGet("/api/test", () => new
+{
+    message = "API funktioniert",
+    time = DateTime.Now,
+    endpoints = new[] { "/api/raume", "/api/buchungen", "/api/account" }
+});
+
+Console.WriteLine("🚀 API läuft auf http://localhost:5012");
+Console.WriteLine("📚 Swagger UI: http://localhost:5012/swagger");
+Console.WriteLine("⏹️  Drücke Ctrl+C zum Beenden");
+
+await app.RunAsync();
