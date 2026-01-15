@@ -571,3 +571,7 @@ C:\Users\hamid\Projekt_Raumbuchung\Meins_Hamid\Raumbuchung.API\obj\Debug\net9.0\
 C:\Users\hamid\Projekt_Raumbuchung\Meins_Hamid\Raumbuchung.API\obj\Debug\net9.0\Raumbuchung.API.genruntimeconfig.cache
 C:\Users\hamid\Projekt_Raumbuchung\Meins_Hamid\Raumbuchung.API\obj\Debug\net9.0\ref\Raumbuchung.API.dll
 >>>>>>> 75f3b7caf3d3587137f4e210f579e9a5ecbd96a1
+C:\Users\hamid\OneDrive\Dokumente\GitHub\Raumbuchng\Raumbuchung.API\obj\Debug\net9.0\Raumbuchung.API.csproj.AssemblyReference.cache
+C:\Users\hamid\OneDrive\Dokumente\GitHub\Raumbuchng\Raumbuchung.API\obj\Debug\net9.0\Raumbuchung.API.dll
+C:\Users\hamid\OneDrive\Dokumente\GitHub\Raumbuchng\Raumbuchung.API\obj\Debug\net9.0\refint\Raumbuchung.API.dll
+C:\Users\hamid\OneDrive\Dokumente\GitHub\Raumbuchng\Raumbuchung.API\obj\Debug\net9.0\Raumbuchung.API.pdb
