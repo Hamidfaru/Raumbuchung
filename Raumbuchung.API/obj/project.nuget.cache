@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "uk5rqt50Vfc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+=======
   "dgSpecHash": "T5v+d7gYoxE=",
   "success": true,
   "projectFilePath": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
+>>>>>>> 2b5139916382bcadfd09a9fa615258cb1071b46b
   "expectedPackageFiles": [
     "C:\\Users\\hamid\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\hamid\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
@@ -62,5 +68,26 @@
     "C:\\Users\\hamid\\.nuget\\packages\\system.text.json\\9.0.10\\system.text.json.9.0.10.nupkg.sha512",
     "C:\\Users\\hamid\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
+<<<<<<< HEAD
   "logs": []
+=======
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+<<<<<<< HEAD
+      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\obj\\project.nuget.cache\": '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\hamid\\Projekt_Raumbuchung\\Projekt_Raumbuchung\\Raumbuchung.API\\Raumbuchung.API\\Raumbuchung.API.csproj",
+=======
+      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\obj\\project.nuget.cache\": '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Raumbuchung.API.csproj",
+>>>>>>> 2b5139916382bcadfd09a9fa615258cb1071b46b
+      "targetGraphs": []
+    }
+  ]
+>>>>>>> af43dfcbdf373c6e4ddf6580a51d5ced5911cb35
 }
