@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Raumbuchung.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71765b7bbee3af810c25678fde1c86a0157f313b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd0dfff5cd94096fda99e674e7e37a2d1f47b1b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Raumbuchung.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Raumbuchung.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
