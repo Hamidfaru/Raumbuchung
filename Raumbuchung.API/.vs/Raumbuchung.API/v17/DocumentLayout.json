@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\onedrive\\dokumente\\github\\raumbuchng\\raumbuchung.api\\models\\buchung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:models\\buchung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\onedrive\\dokumente\\github\\raumbuchng\\raumbuchung.api\\models\\raum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:models\\raum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\onedrive\\dokumente\\github\\raumbuchng\\raumbuchung.api\\models\\account\\benutzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:models\\account\\benutzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|c:\\users\\hamid\\onedrive\\dokumente\\github\\raumbuchng\\raumbuchung.api\\data\\oracledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{500896E4-99E3-183E-0FA6-A82575A84BFA}|Raumbuchung.API.csproj|solutionrelative:data\\oracledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,11 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Raum.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Models\\Raum.cs",
+              "RelativeDocumentMoniker": "Models\\Raum.cs",
+              "ToolTip": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Models\\Raum.cs",
+              "RelativeToolTip": "Models\\Raum.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T17:06:16.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Buchung.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Models\\Buchung.cs",
+              "RelativeDocumentMoniker": "Models\\Buchung.cs",
+              "ToolTip": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Models\\Buchung.cs",
+              "RelativeToolTip": "Models\\Buchung.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAYwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T17:05:59.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Benutzer.cs",
+              "DocumentMoniker": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Models\\Account\\Benutzer.cs",
+              "RelativeDocumentMoniker": "Models\\Account\\Benutzer.cs",
+              "ToolTip": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Models\\Account\\Benutzer.cs",
+              "RelativeToolTip": "Models\\Account\\Benutzer.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAA2wDYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T17:05:33.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OracleDbContext.cs",
               "DocumentMoniker": "C:\\Users\\hamid\\OneDrive\\Dokumente\\GitHub\\Raumbuchng\\Raumbuchung.API\\Data\\OracleDbContext.cs",
               "RelativeDocumentMoniker": "Data\\OracleDbContext.cs",
